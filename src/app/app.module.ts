@@ -43,6 +43,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
         component: HomeComponent, 
         pathMatch: 'full' 
       },
+      { path: 'about', loadChildren: () => import('./about/about.module').then(m => m.AboutModule) },
       { path: 'venues/:city', loadChildren: () => import('./venues-page/venues-page.module').then(m => m.VenuesPageModule) },
       { path: ':city', loadChildren: () => import('./event-page/event-page.module').then(m => m.EventPageModule) },
       { path: 'events/:eventId', loadChildren: () => import('./event-detail/event-detail.module').then(m => m.EventDetailModule) },

@@ -1,0 +1,18 @@
+.contact-item {
+    font-size: 1.06rem;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 1.06rem;
+}
+
+@media (min-width: 992px){
+    .contact-large .contact-item {
+        font-size: 1.66rem;
+        /* text-align: center; */
+    }
+}
+
+a {
+    color: palevioletred;
+    padding-left: 1rem;
+}
