@@ -22,7 +22,7 @@ import { EventConcert } from '../../interface/eventconcert';
   ]
 })
 export class EventPageComponent implements OnInit, AfterViewInit {
-  private events: EventConcert[] = [];
+  events: EventConcert[] = [];
   private route: ActivatedRouteSnapshot;
   currentCity: string = '';
   citiesDropdown: string[] = ['Arcata', 'Eureka', 'All'];

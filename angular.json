@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "./var/www/thefortress.vip/html",
+            "outputPath": "dist/html",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -72,7 +72,8 @@
               "browserTarget": "fortress-core-client:build:production"
             },
             "development": {
-              "browserTarget": "fortress-core-client:build:development"
+              "browserTarget": "fortress-core-client:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

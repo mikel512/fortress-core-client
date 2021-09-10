@@ -1,9 +1,11 @@
-<div class="container contact-large" style="padding-top: 6rem;">
+<div class="container contact-large contact-m">
     <div class="row">
-        <p class="text-light contact-item">
+        <a class="text-light contact-item"
+            [routerLink]="" 
+            [cdkCopyToClipboard]='email'>
             <i class="far fa-envelope"></i>
-            thefortressbooking@gmail.com
-        </p>
+            {{email}}
+        </a>
 
     </div>
     <div class="row">

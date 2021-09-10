@@ -11,12 +11,14 @@
         </a>
     </div>
     <div class="caption">
-        {{event.dateFormatted}}
-        <br>
+        <div class="date">
+
+            {{event.dateFormatted}}
+        </div>
         <div class="event-box-headline">
             <a routerLink="/events/{{event.eventConcertId}}">{{event.eventName}}</a>
         </div>
-        <div class="venue-link">
+        <div class="venue-link" >
             {{event.venue.venueName}}
         </div>
     </div>

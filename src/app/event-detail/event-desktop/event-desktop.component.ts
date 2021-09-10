@@ -17,9 +17,7 @@ export class EventDesktopComponent implements OnInit {
   ngOnInit(): void {
     var values = this.dataDesk.dateFormatted.split(',');
     this.displayDate = values[1];
-    console.log(this.dataDesk);
     this.checkStatus();
-    console.log(this.abnormalStatus);
   }
 
   flyerURL() {
