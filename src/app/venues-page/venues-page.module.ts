@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { VenuesPageComponent } from './venues-page.component';
 import { VenueItemComponent } from './venue-item/venue-item.component';
 import { LoadingAnimationsModule } from '../loading-animations/loading-animations.module';
+import { SearchBarModule } from '../search-bar/search-bar.module';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    LoadingAnimationsModule
+    LoadingAnimationsModule,
+    SearchBarModule
   ]
 })
 export class VenuesPageModule { }

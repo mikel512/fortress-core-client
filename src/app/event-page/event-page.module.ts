@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EventPageComponent } from './event-page.component';
 import { EventItemModule } from '../event-item/event-item.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchBarModule } from '../search-bar/search-bar.module';
 
 const routes: Routes = [
   { path: '', component: EventPageComponent }
@@ -15,6 +16,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     EventItemModule,
+    SearchBarModule
   ]
 })
 export class EventPageModule { }

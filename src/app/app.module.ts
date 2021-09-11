@@ -49,7 +49,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
       { path: 'events/:eventId', loadChildren: () => import('./event-detail/event-detail.module').then(m => m.EventDetailModule) },
       { path: 'venue-detail/:venueId', loadChildren: () => import('./venue-detail/venue-detail.module').then(m => m.VenueDetailModule) },
       { path: 'loading-animations', loadChildren: () => import('./loading-animations/loading-animations.module').then(m => m.LoadingAnimationsModule) },
-    ])
+    ]),
   ],
   providers: [
     SpinnerOverlayService,

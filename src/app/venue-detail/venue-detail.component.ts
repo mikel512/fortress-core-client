@@ -20,10 +20,6 @@ import { SpinnerOverlayService } from '../../services/spinner-overlay.service';
   ]
 })
 export class VenueDetailComponent implements OnInit {
-  // @ViewChild('eventTab') eventTab?: ElementRef;
-  // @ViewChild('infoTab') infoTab?: ElementRef;
-  // @ViewChild('events') event?: ElementRef;
-  // @ViewChild('info') info?: ElementRef;
   onTabChange: boolean = true;
   private route: ActivatedRouteSnapshot;
   private venueId: string = '';
@@ -53,30 +49,8 @@ export class VenueDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEventTabClick(): void {
-    // let eTab = this.eventTab?.nativeElement;
-    // eTab.classList.add('active');
-    // let iTab = this.infoTab?.nativeElement;
-    // iTab.classList.remove('active');
-    // let infoContent = this.info?.nativeElement;
-    // infoContent.classList.remove('active');
-    // let eventContent = this.event?.nativeElement;
-    // eventContent.classList.add('active');
-  }
-
   toggleTab() {
     this.onTabChange = !this.onTabChange;
   }
 
-  onInfoTabClick(): void {
-    // let eTab = this.eventTab?.nativeElement;
-    // eTab.classList.remove('active');
-    // let iTab = this.infoTab?.nativeElement;
-    // iTab.classList.add('active');
-    // let infoContent = this.info?.nativeElement;
-    // infoContent.classList.add('active');
-    // let eventContent = this.event?.nativeElement;
-    // eventContent.classList.remove('active');
-
-  }
 }

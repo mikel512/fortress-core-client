@@ -21,11 +21,10 @@ import { EventConcert } from '../../interface/eventconcert';
     ])
   ]
 })
-export class EventPageComponent implements OnInit, AfterViewInit {
+export class EventPageComponent implements OnInit {
   events: EventConcert[] = [];
   private route: ActivatedRouteSnapshot;
   currentCity: string = '';
-  citiesDropdown: string[] = ['Arcata', 'Eureka', 'All'];
 
   staggeringEvents: EventConcert[] = [];
   private next: number = 0;
@@ -36,7 +35,6 @@ export class EventPageComponent implements OnInit, AfterViewInit {
 
     this.route = actRouter.snapshot;
     this.currentCity = this.route.params['city'];
-    this.citiesDropdown = this.citiesDropdown.filter(e => e !== this.currentCity);
 
     if (this.currentCity === 'All') {
 
@@ -57,26 +55,9 @@ export class EventPageComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-
-  }
-
   doNext() {
-    if(this.next <this.events.length) {
+    if(this.next < this.events.length) {
       this.staggeringEvents.push(this.events[this.next++]);
-    }
-  }
-
-  navVenues() {
-    let val = 'venues/' + this.currentCity;
-    this.router.navigate([val]);
-  }
-
-  navigateTo(e: Event) {
-    let value = (<HTMLSelectElement>e.target).value
-    if (value) {
-      this.router.navigateByUrl('/', { skipLocationChange: true }).then(() =>
-        this.router.navigate([value]));
     }
   }
 
