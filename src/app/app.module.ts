@@ -19,6 +19,7 @@ import { SpinnerOverlayComponent } from './spinner-overlay/spinner-overlay.compo
 import { SpinnerOverlayService } from '../services/spinner-overlay.service';
 import { LoaderInterceptor } from '../interceptors/loader.interceptor';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    // ApiAuthorizationModule,
+    ApiAuthorizationModule,
     RouterModule.forRoot([
       { path: '', 
         component: HomeComponent, 
