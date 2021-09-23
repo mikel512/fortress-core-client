@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewChecked, Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { Venue } from '../../interface/venue';
+import { Venue } from '../../../../interface/venue';
 
 @Component({
   selector: 'app-venues-page',

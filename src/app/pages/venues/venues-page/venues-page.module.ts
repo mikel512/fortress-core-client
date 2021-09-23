@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { VenuesPageComponent } from './venues-page.component';
-import { VenueItemComponent } from './venue-item/venue-item.component';
-import { LoadingAnimationsModule } from '../loading-animations/loading-animations.module';
-import { SearchBarModule } from '../search-bar/search-bar.module';
+import { VenueItemComponent } from '../venue-item/venue-item.component';
+import { LoadingAnimationsModule } from '../../../loading-animations/loading-animations.module';
+import { SearchBarModule } from '../../../search-bar/search-bar.module';
 
 
 const routes: Routes = [

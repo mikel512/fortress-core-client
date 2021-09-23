@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { VenueDetailComponent } from './venue-detail.component';
-import { EventItemModule } from '../event-item/event-item.module';
+import { EventItemModule } from '../../events/event-item/event-item.module';
 
 
 const routes: Routes = [

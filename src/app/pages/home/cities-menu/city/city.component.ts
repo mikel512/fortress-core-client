@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { City } from '../../../../interface/city';
+import { City } from '../../../../../interface/city';
 
 @Component({
   selector: 'app-city',

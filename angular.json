@@ -73,7 +73,10 @@
             },
             "development": {
               "browserTarget": "fortress-core-client:build:development",
-              "proxyConfig": "src/proxy.conf.json"
+              "proxyConfig": "src/proxy.conf.json",
+              "ssl": true,
+              "sslCert": "ssl/server.crt",
+              "sslKey": "ssl/server.key"
             }
           },
           "defaultConfiguration": "development"

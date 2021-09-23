@@ -30,10 +30,11 @@ export class AuthorizeInterceptor implements HttpInterceptor {
     return next.handle(req);
   }
 
+
   private isSameOriginUrl(req: any) {
     // It's an absolute url with the same origin.
-    console.log(req);
-    console.log(`${window.location.origin}`);
+    // console.log(req);
+    // console.log(`${window.location.origin}`);
     if (req.url.startsWith(`${window.location.origin}/`)) {
       return true;
     }
@@ -54,4 +55,5 @@ export class AuthorizeInterceptor implements HttpInterceptor {
     console.log(false);
     return false;
   }
+
 }

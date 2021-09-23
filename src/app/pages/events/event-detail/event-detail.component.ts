@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewChecked, Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { EventConcert } from '../../interface/eventconcert';
+import { EventConcert } from '../../../../interface/eventconcert';
 
 @Component({
   selector: 'app-event-detail',

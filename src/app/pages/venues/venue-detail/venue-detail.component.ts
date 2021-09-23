@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { Venue } from '../../interface/venue';
-import { EventConcert } from '../../interface/eventconcert';
+import { Venue } from '../../../../interface/venue';
+import { EventConcert } from '../../../../interface/eventconcert';
 import { animate, style, transition, trigger } from '@angular/animations';
-import { SpinnerOverlayService } from '../../services/spinner-overlay.service';
+import { SpinnerOverlayService } from '../../../../services/spinner-overlay.service';
 
 @Component({
   selector: 'app-venue-detail',

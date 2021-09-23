@@ -25,8 +25,7 @@ export class LoginComponent implements OnInit {
     const action = this.activatedRoute.snapshot.url[1];
     switch (action.path) {
       case LoginActions.Login:
-        // await this.login(this.getReturnUrl());
-        await this.redirectToLogin()
+        await this.login(this.getReturnUrl());
         break;
       case LoginActions.LoginCallback:
         await this.processLoginCallback();
@@ -48,7 +47,6 @@ export class LoginComponent implements OnInit {
 
 
   private async login(returnUrl: string): Promise<void> {
-    console.log(returnUrl);
     const state: INavigationState = { returnUrl };
     const result = await this.authorizeService.signIn(state);
     this.message.next(undefined);
@@ -69,7 +67,8 @@ export class LoginComponent implements OnInit {
   }
 
   private async processLoginCallback(): Promise<void> {
-    const url = `${ApplicationPaths.ApiAuthorizationPath}`;
+    const url = window.location.href;
+
     const result = await this.authorizeService.completeSignIn(url);
     switch (result.status) {
       case AuthenticationResultStatus.Redirect:

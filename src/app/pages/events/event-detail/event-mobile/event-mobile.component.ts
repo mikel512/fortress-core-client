@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EventConcert } from '../../../interface/eventconcert';
+import { EventConcert } from '../../../../../interface/eventconcert';
 
 @Component({
   selector: 'app-event-mobile',
