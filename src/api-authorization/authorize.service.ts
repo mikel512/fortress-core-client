@@ -74,6 +74,7 @@ export class AuthorizeService {
   // 3) If the two methods above fail, we redirect the browser to the IdP to perform a traditional
   //    redirect flow.
   public async signIn(state: any): Promise<IAuthenticationResult> {
+    console.log("singIn");
     await this.ensureUserManagerInitialized();
     let user!: User;
     try {
@@ -112,6 +113,7 @@ export class AuthorizeService {
   }
 
   public async completeSignIn(url: string): Promise<IAuthenticationResult> {
+    console.log("completeSignIn");
     try {
       await this.ensureUserManagerInitialized();
       const user = await this.userManager.signinCallback(url);
@@ -187,8 +189,9 @@ export class AuthorizeService {
     settings.automaticSilentRenew = true;
     settings.includeIdTokenInSilentRenew = true;
     settings.authority = "https://localhost:5001";
+    // settings.authority = `${window.location.origin}` + '/api';
     settings.client_secret = "secret"
-    settings.metadataUrl = "https://localhost:5001/.well-known/openid-configuration"
+    // settings.metadataUrl = `${window.location.origin}`+"/api/.well-known/openid-configuration"
     this.userManager = new UserManager(settings);
 
     this.userManager.events.addUserSignedOut(async () => {
