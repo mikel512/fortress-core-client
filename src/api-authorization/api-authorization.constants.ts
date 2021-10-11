@@ -43,7 +43,8 @@ let applicationPaths: ApplicationPathsType = {
   IdentityRegisterPath: 'Identity/Account/Register',
   IdentityLoginPath: 'Identity/Account/Login',
   IdentityManagePath: 'Identity/Account/Manage',
-  ApiAuthorizationPath: 'https://localhost:5001'
+  ApiAuthorizationPath: 'https://localhost:5001',
+  ApiBasePath: 'https://api.thefortress.vip/'
 };
 
 applicationPaths = {
@@ -80,6 +81,7 @@ interface ApplicationPathsType {
   readonly IdentityLoginPath: string;
   readonly IdentityManagePath: string;
   readonly ApiAuthorizationPath: string;
+  readonly ApiBasePath: string;
 }
 
 export const ApplicationPaths: ApplicationPathsType = applicationPaths;

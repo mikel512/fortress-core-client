@@ -22,9 +22,6 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 
-export function tokenGetter() {
-  return localStorage.getItem("jwt");
-}
 
 @NgModule({
   declarations: [
@@ -62,7 +59,7 @@ export function tokenGetter() {
   providers: [
     SpinnerOverlayService,
     { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
+    // { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

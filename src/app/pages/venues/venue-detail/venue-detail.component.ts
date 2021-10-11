@@ -5,6 +5,7 @@ import { Venue } from '../../../../interface/venue';
 import { EventConcert } from '../../../../interface/eventconcert';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { SpinnerOverlayService } from '../../../../services/spinner-overlay.service';
+import { ApplicationPaths } from 'src/api-authorization/api-authorization.constants';
 
 @Component({
   selector: 'app-venue-detail',
@@ -30,17 +31,18 @@ export class VenueDetailComponent implements OnInit {
     private overlayService: SpinnerOverlayService,
     private router: Router,
     http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+      let apiUrl = `${ApplicationPaths.ApiBasePath}`;
 
     this.route = actRouter.snapshot;
     this.venueId = this.route.params['venueId'];
 
     // get venue details
-    http.get<Venue>(baseUrl + 'api/Venue/' + this.venueId).subscribe(result => {
+    http.get<Venue>(apiUrl + 'Venue/' + this.venueId).subscribe(result => {
       this.venue = result;
     }, error => console.log('error'));
     // get corresponding venue's events
     overlayService.hide();
-    http.get<EventConcert[]>(baseUrl + 'api/Concert/' + this.venueId + '/true').subscribe(result => {
+    http.get<EventConcert[]>(apiUrl + 'Concert/' + this.venueId + '/true').subscribe(result => {
       this.concerts = result;
     }, error => console.log(error));
 

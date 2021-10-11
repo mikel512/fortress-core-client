@@ -2,6 +2,7 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
 import { HttpClient } from '@angular/common/http';
 import { AfterViewChecked, AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+import { ApplicationPaths } from 'src/api-authorization/api-authorization.constants';
 import { EventConcert } from '../../../../interface/eventconcert';
 
 @Component({
@@ -32,19 +33,20 @@ export class EventPageComponent implements OnInit {
   constructor(private actRouter: ActivatedRoute,
     private router: Router,
     http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
+    let apiUrl = `${ApplicationPaths.ApiBasePath}`
 
     this.route = actRouter.snapshot;
     this.currentCity = this.route.params['city'];
 
     if (this.currentCity === 'All') {
 
-      http.get<EventConcert[]>(baseUrl + 'api/concert').subscribe(result => {
+      http.get<EventConcert[]>(apiUrl + 'concert').subscribe(result => {
         this.events = result;
         this.doNext();
       }, error => console.error(error));
     } else {
 
-      http.get<EventConcert[]>(baseUrl + 'api/concert/city/' + this.currentCity).subscribe(result => {
+      http.get<EventConcert[]>(apiUrl + 'concert/city/' + this.currentCity).subscribe(result => {
         this.events = result;
         this.doNext();
       }, error => console.error(error));
