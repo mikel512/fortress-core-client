@@ -188,7 +188,7 @@ export class AuthorizeService {
     const settings: any = await response.json();
     settings.automaticSilentRenew = true;
     settings.includeIdTokenInSilentRenew = true;
-    settings.authority = "https://localhost:5001";
+    settings.authority = "https://api.thefortress.vip";
     // settings.authority = `${window.location.origin}` + '/api';
     settings.client_secret = "secret"
     // settings.metadataUrl = `${window.location.origin}`+"/api/.well-known/openid-configuration"

@@ -43,7 +43,7 @@ let applicationPaths: ApplicationPathsType = {
   IdentityRegisterPath: 'Identity/Account/Register',
   IdentityLoginPath: 'Identity/Account/Login',
   IdentityManagePath: 'Identity/Account/Manage',
-  ApiAuthorizationPath: 'https://localhost:5001',
+  ApiAuthorizationPath: 'https://api.thefortress.vip',
   ApiBasePath: 'https://api.thefortress.vip/'
 };
 
